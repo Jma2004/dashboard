@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope" rel="stylesheet">
+  
+  <style>
+    .clickable {
+      color: #4EB1FF;
+    }
+    .size14 {
+      font-size: 14px;
+    }
+    .size18 {
+      font-size: 18px;
+    }
+    .lineHeight38 {
+      line-height: 38px;
+    }
+    .gap11 {
+      gap: 11px;
+    }
+    .gap12{
+      gap: 12px;
+    }
+    .gap1547 {
+      gap: 15.47px;
+    }
+    .gap16 {
+      gap: 16px;
+    }
+    .gap5{
+      gap: 5px;
+    }
+    .borderRadius8{
+      border-radius: 8px;
+    }
+    .borderRadius10 {
+      border-radius: 10px;
+    }
+    .borderRadius20 {
+      border-radius: 20px;
+    }
+    .borderRadius24 {
+      border-radius: 24px;
+    }
+    .borderRadius40 {
+      border-radius: 40px;
+    }
+    .circle {
+      border-radius: 1000px;
+    }
+    .padding614{
+      padding: 6px 14px;
+    }
+    .padding618{
+      padding: 6px 18px;
+    }
+    .padding12 {
+      padding: 12px;
+    }
+    .lightGrey {
+      background: #F5F5F5;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+  </style>
+  
+</head>
+  
+<body style='background: #FAFAFA; font-family: manrope;'>
+  <div class="container-fluid p-4">
+  <div class="row">
+    <div class="col-lg-3 px-3">
+      <div class='d-flex flex-column border p-4 h-100 borderRadius40 gap1547'>
+        <div class='py-2'>Logo</div>
+        <div class='d-flex flex-column gap12'>
+          <a type='button' class='bg-white border borderRadius8 d-flex align-items-center clickable padding614'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg mr-2" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+</svg>
+            Create Street Turn
+          </a>
+         <a type='button' class='bg-white border borderRadius8 d-flex align-items-center clickable padding614'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg mr-2" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+</svg>
+            Create Empty Release</a>
+         <a type='button' class='bg-white border borderRadius8 d-flex align-items-center clickable padding614'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg mr-2" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+</svg>
+            Create Empty Return</a>
+        </div>
+        <div class='d-flex flex-column border borderRadius24 gap12 bg-white padding12'>
+          <div class='border p-2 lightGrey borderRadius10'>
+            <div class="d-flex gap12 justify-content-center">
+              <button type="button" class="border borderRadius8 padding614 bg-white size14">Empty Release</button>
+              <button type="button" class="border borderRadius8 padding614 lightgrey size14">Empty Release</button>
+            </div>
+          </div>
+          <div class='text-center d-flex justify-content-between align-items-center lineHeight38' style='padding: 0 0 0 6px;'>
+            <div class='size18'>Availability</div>
+            <a type='button' class='border d-flex align-items-center borderRadius8 size14' style='padding: 0px 14px;'>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders2 mr-1" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4H1.5a.5.5 0 0 1 0-1H10V1.5a.5.5 0 0 1 .5-.5ZM12 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-6.5 2A.5.5 0 0 1 6 6v1.5h8.5a.5.5 0 0 1 0 1H6V10a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5ZM1 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 1 8Zm9.5 2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V13H1.5a.5.5 0 0 1 0-1H10v-1.5a.5.5 0 0 1 .5-.5Zm1.5 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z"/>
+</svg>
+              <div style='color: #555555'>Filter</div>
+            </a>
+          </div>
+          <select class="form-control form-control-sm borderRadius8">
+            <option>40HC</option>
+            <option>40ST</option>
+            <option>20ST</option>
+          </select>
+          <ul class='d-flex flex-column text-center gap12'>
+            <li class='border d-flex justify-content-between border align-items-center borderRadius20' style='padding: 6px 17px 6px 6px;'>
+              <div class='d-flex align-items-center'>
+                <div class='border circle mr-2' style='width: 28px; height: 28px;'></div>
+                Depot
+              </div>
+              <div>Availability</div>
+            </li>
+            <li class='border d-flex justify-content-between borderRadius20' style='padding: 6px 17px 6px 6px;'>
+             <div class='d-flex align-items-center'>
+                <div class='border circle mr-2' style='width: 28px; height: 28px;'></div>
+                Depot
+              </div>
+              <div>Availability</div>
+            </li>
+            <li class='border d-flex justify-content-between borderRadius20' style='padding: 6px 17px 6px 6px;'>
+             <div class='d-flex align-items-center'>
+                <div class='border circle mr-2' style='width: 28px; height: 28px;'></div>
+                Depot
+              </div>
+              <div>Availability</div>
+            </li>
+            <li class='border d-flex justify-content-between borderRadius20' style='padding: 6px 17px 6px 6px;'>
+             <div class='d-flex align-items-center'>
+                <div class='border circle mr-2' style='width: 28px; height: 28px;'></div>
+                Depot
+              </div>
+              <div>Availability</div>
+            </li>
+            <li class='border d-flex justify-content-between borderRadius20' style='padding: 6px 17px 6px 6px;'>
+             <div class='d-flex align-items-center'>
+                <div class='border circle mr-2' style='width: 28px; height: 28px;'></div>
+                Depot
+              </div>
+              <div>Availability</div>
+            </li>
+          </ul>
+        </div>
+          <div class='d-flex justify-content-between'>
+            <div class='d-flex flex-column gap5'>
+              <div class='border circle' style='width:86px; height:86px;'><img></div>
+              <div class='text-center size14'>User Name</div>
+              <div class='text-center size14'>Log out</div>
+            </div>
+            <div class='border flex-fill ml-4 d-flex flex-column bg-white gap11 borderRadius24 padding12'>
+              <div class='text-center size14'>Available Balance</div>
+              <div class='text-center lineHeight38'>$123.45</div>
+              <div class='text-center size14'>Add Balance</div>
+            </div>
+          </div>
+          <div class='border d-flex align-items-center justify-content-around borderRadius24' style='padding: 10px 11px;'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-tree" viewBox="0 0 16 16">
+  <path d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5zM6.437 4.758A.5.5 0 0 0 6 4.5h-.066L8 1.401 10.066 4.5H10a.5.5 0 0 0-.424.765L11.598 8.5H11.5a.5.5 0 0 0-.447.724L12.69 12.5H3.309l1.638-3.276A.5.5 0 0 0 4.5 8.5h-.098l2.022-3.235a.5.5 0 0 0 .013-.507z"/>
+</svg>
+            <div class='size14'><strong>123.4 kg</strong></div>
+            <div class='size14'>Carbon Emissions Saved</div>
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-9 d-flex flex-column">
+      <div class='row no-gutters d-flex gap16'>
+        <div class='col'>
+          <div class='border p-2 bg-white d-flex flex-column borderRadius24 gap12' style='height: 669px;'>
+            <div class='d-flex justify-content-between align-items-center lineHeight38' style=' padding-left: 6px;'>
+              <a class='size18 clickable'>
+                Street Turn
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+</svg>
+              </a>
+              <div type='button' class='border borderRadius8' style='padding: 0px 14px;'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4EB1FF" class="bi bi-sliders2" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4H1.5a.5.5 0 0 1 0-1H10V1.5a.5.5 0 0 1 .5-.5ZM12 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-6.5 2A.5.5 0 0 1 6 6v1.5h8.5a.5.5 0 0 1 0 1H6V10a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5ZM1 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 1 8Zm9.5 2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V13H1.5a.5.5 0 0 1 0-1H10v-1.5a.5.5 0 0 1 .5-.5Zm1.5 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z"/>
+</svg>
+                <span class='size14'>Filter</span>
+              </div>
+            </div>
+            <div class='size18 lineHeight38'>Pending/Paid Orders</div>
+            <ul class='p-0 m-0 d-flex flex-column borderRadius10 gap12'>
+              <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+                <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+                <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                  <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+                  <a class='d-flex align-items-center clickable' type='button' style='font-size: 12px;'>
+                    View All 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12.5" height="12.5" fill="currentColor" class="ml-1 bi bi-plus-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+                  </a>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>
+                    Status
+                  </span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+               <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+               <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+               <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+               <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+          </div>
+        </div>
+        <div class='col'>
+          <div class='border p-2 bg-white d-flex flex-column borderRadius24 gap12' style='height: 669px; overflow-y:hidden;'>
+            <div class='d-flex justify-content-between align-items-center lineHeight38' style='padding-left: 6px;'>
+              <a class='clickable size18'>
+                Empty Release
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+</svg>
+              </a>
+              <div type='button' class='border borderRadius8' style='padding: 0px 14px;'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4EB1FF" class="bi bi-sliders2" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4H1.5a.5.5 0 0 1 0-1H10V1.5a.5.5 0 0 1 .5-.5ZM12 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-6.5 2A.5.5 0 0 1 6 6v1.5h8.5a.5.5 0 0 1 0 1H6V10a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5ZM1 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 1 8Zm9.5 2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V13H1.5a.5.5 0 0 1 0-1H10v-1.5a.5.5 0 0 1 .5-.5Zm1.5 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z"/>
+</svg>
+                <span class='size14'>Filter</span>
+              </div>
+            </div>
+            <div class='size18 lineHeight18'>Pending/Paid Orders</div>
+            <ul class='p-0 m-0 d-flex flex-column borderRadius10 gap12'>
+              <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+                <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                  <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+                  <a class='d-flex align-items-center clickable' type='button' data-toggle='collapse' href='#ordernumber' role='button' aria-expanded='false' aria-controls='ordernumber' style='font-size: 12px;'>
+                    Collapse
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12.5" height="12.5" fill="currentColor" class=" ml-1 bi bi-dash-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+</svg>
+                  </a>
+                </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+                <div class='d-flex align-items-center justify-content-between collapse' id='ordernumber'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+                <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+               <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+               <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+               <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+               <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+          </div>
+        </div>
+       <div class='col'>
+          <div class='border p-2 bg-white d-flex flex-column borderRadius24 gap12' style='height: 669px; overflow-y:hidden;'>
+            <div class='d-flex justify-content-between align-items-center lineHeight38' style='padding-left: 6px;'>
+              <a class='size18 clickable'>
+                Empty Return
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+</svg>
+              </a>
+              <div type='button' class='border borderRadius8' style='padding: 0px 14px;'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4EB1FF" class="bi bi-sliders2" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4H1.5a.5.5 0 0 1 0-1H10V1.5a.5.5 0 0 1 .5-.5ZM12 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-6.5 2A.5.5 0 0 1 6 6v1.5h8.5a.5.5 0 0 1 0 1H6V10a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5ZM1 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 1 8Zm9.5 2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V13H1.5a.5.5 0 0 1 0-1H10v-1.5a.5.5 0 0 1 .5-.5Zm1.5 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z"/>
+</svg>
+                <span class='size14'>Filter</span>
+              </div>
+            </div>
+            <div style='font-size: 18px; line-height: 38px;'>Pending/Paid Orders</div>
+            <ul class='p-0 m-0 d-flex flex-column borderRadius10 gap12'>
+              <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+                <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+                <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+               <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+               <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+               <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+             <li class='d-flex flex-column lightGrey borderRadius10 gap12' style="padding: 6px 12px 6px 6px;">
+               <div class='d-flex justify-content-between' style='line-height: 15px;'>
+                <div style='font-size: 12px;'>Order No. <span style='font-size:14px'>12345678</span></div>
+               </div>
+                <div class='d-flex align-items-center justify-content-between'>
+                  <div class='d-flex align-items-center'>
+                    <div class='border mr-2 bg-white borderRadius8' style='height: 38px; width: 38px;'>
+                      <img>
+                    </div>
+                    <div>
+                      <div style='font-size: 12px;'>Container No.</div>
+                      <div class='size14'>12345678910</div>
+                    </div>
+                  </div>
+                  <span class='size14'>Status</span>
+                </div>
+              </li>
+          </div>
+        </div>
+      </div>
+      <div class='row pt-3 flex-fill'>
+        <div class='col-4 pr-2'>
+          <div class='border d-flex flex-column h-100 bg-white borderRadius24 padding12' style='gap: 8px;'>
+            <div class='size18 lineHeight38'><strong>329</strong> Containers Approved</div>
+            <div>
+              <canvas id='doughnutChart' style='height:161px; width: 299px;'></canvas>
+            </div>
+          </div>
+        </div>
+        <div class='col-8 pl-2'>
+          <div class='border h-100 bg-white borderRadius24' style='padding: 12px 18px;'>
+            <div class='d-flex justify-content-between align-items-center lineHeight38 size18' style='margin-bottom: 12px;'>
+              <div>My Empty Release Chart</div>
+              <div type='button' class='border borderRadius8' style='padding: 0px 14px;'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4EB1FF" class="bi bi-sliders2" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4H1.5a.5.5 0 0 1 0-1H10V1.5a.5.5 0 0 1 .5-.5ZM12 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-6.5 2A.5.5 0 0 1 6 6v1.5h8.5a.5.5 0 0 1 0 1H6V10a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5ZM1 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 1 8Zm9.5 2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V13H1.5a.5.5 0 0 1 0-1H10v-1.5a.5.5 0 0 1 .5-.5Zm1.5 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z"/>
+</svg>
+                <span class='size14'>Filter</span>
+              </div>
+            </div>
+            <div class='mx-auto' style='height: 160px;'>
+              <canvas id='barChart'></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <script>
+  const data1 = {
+  //labels: truckers last ten processed empty release bookings
+        labels: ['YVR2314245', 'EUR23423412', 'YTR432456', 'EITU3453245', 'YVR235345', 'YVR2341345',
+                'EITU8932', 'YTR234521'],
+        datasets: [{
+          //picked up - how many containers have been picked up under the booking
+          label: 'Picked Up',
+          data: [12, 19, 3, 5, 2, 3, 6, 0],
+          backgroundColor: ['#72D9FF'],
+          borderRadius: {
+            topRight: 6.5,
+            topLeft: 6.5,
+            bottomRight: 6.5,
+            bottomLeft: 6.5,
+          },
+          borderWidth: 2,
+          borderSkipped: false,
+          borderColor: 'white',
+        }, 
+        {
+          //incomplete - total booking quantity minus picked up quantity
+          label: 'Incomplete',
+          data: [3, 0, 5, 7, 8, 5, 3, 10],
+          backgroundColor: ['#4EB1FF'],
+          borderRadius: 6.5,
+          borderSkipped: false,
+          borderWidth: 2,
+          borderColor: 'white',
+        }
+        ]
+      };
+
+//config
+const config1 = {
+  data: data1,
+  type: 'bar',
+  options: {
+    maintainAspectRatio: false,
+      scales: {
+        x: {
+          //enable stacking
+          stacked: true,
+          //disables grid lines
+          grid: {
+            display: false,
+          },
+          border: {
+            display: false,
+          }
+        },
+        y: {
+          //enable stacking
+          stacked: true,
+          //disables grid lines
+           grid: {
+            display: false,
+          },
+          //disables y axis values
+          ticks: {
+            display: false
+          },
+          border: {
+            display: false,
+          }
+        }
+      },
+    //changes cursor on hover over bar
+      onHover: (event, chartElement) => {
+        if (chartElement.length == 1) {
+          event.native.target.style.cursor = 'pointer';
+        }
+        if (chartElement.length == 0) {
+          event.native.target.style.cursor = 'default';
+        }
+      },
+      plugins: {
+        legend: {
+          labels: {
+            usePointStyle: 'true'
+          }
+        }
+      },
+    }
+};
+
+
+//render
+const canvas = document.getElementById('barChart');
+const barchart = new Chart(canvas, config1);
+    
+//circle chart
+const datavalues = [40,70,96];
+//circle chart
+const data2 = {
+  labels: ['Street Turn', 'Empty Release', 'Empty Return'],
+  datasets: [{
+    //data: total empty return, empty release, street turns
+    data: datavalues,
+    backgroundColor: ['#72D9FF', '#4EB1FF', '#3E4BE3']
+  }]
+};
+  const config2 = {
+  type: 'doughnut',
+  data: data2,
+  options: {
+    maintainAspectRatio: false,
+    datasets: {
+      doughnut: {
+        cutout:'65%',
+        borderWidth: 4,
+        borderRadius: 6.5,
+      }
+    },
+    plugins: {
+      legend: {
+        position: 'left',
+        labels: {
+          textAlign: 'left',
+          padding: 15,
+          usePointStyle: 'true',
+        }
+      },
+    }
+  }
+};
+    const doughnutchart = new Chart(document.getElementById('doughnutChart'), config2);
+  </script>
+</body>
+
+</html>
